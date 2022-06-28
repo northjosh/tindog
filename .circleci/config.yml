@@ -42,7 +42,7 @@ jobs:
       - run:
           name: Install ssh
           command: |
-            - run: apk add --update openssh-client git
+            apk add --update openssh-client git
 
       - run:
           name: Run Playbook and Configure server
