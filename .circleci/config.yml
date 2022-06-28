@@ -40,6 +40,11 @@ jobs:
           command: |
             apk add --update ansible
       - run:
+          name: Install ssh
+          command: |
+            - run: apk add --update openssh-client git
+
+      - run:
           name: Run Playbook and Configure server
           command: |
             ansible-playbook main.yml -i inventory
