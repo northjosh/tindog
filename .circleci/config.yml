@@ -63,7 +63,7 @@ jobs:
 
   smoke_test:
     docker:
-      - image: amazon/awscli
+      - image: amazon/aws-cli
     steps:
       - run: apk add --update curl
 
