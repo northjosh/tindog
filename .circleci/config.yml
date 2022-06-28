@@ -63,7 +63,7 @@ jobs:
 
   smoke_test:
     docker:
-      - image: alpine:latest
+      - image: amazon/awscli
     steps:
       - run: apk add --update curl
 
@@ -82,3 +82,5 @@ workflows:
       - create_infrastructure
       # - configure_infrastructure
       - smoke_test
+          requires:
+            - create_infrastructure
